@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="to.css">
+</head>
+<body>
+    <header>
+    <h1 class="border">To-Do-List</h1>
+</header>
+<h2 id="taskspace">
+    <ol id="del">
+        <li>Set clear goals</li>
+        <li>Prioritze tasks</li>
+        <li>Stay positive</li>
+        <li>Take breaks</li>
+        <li>Reward yourself</li>
+        <p>Welcome to  my To-Do-List</p>
+        <p>To add a task click the Add button and enter the tasks</p>
+        <p>Once your task is done click  on the task that you have  done</p>
+    </ol>
+</h2>
+<div id="taskbox">
+    <h2>Enter The Task</h2>
+    <input id="singletask"  type="text">
+    <button id="sub" onclick="hide()" type="submit"><h4>Submit</h4></button>
+</div>
+<footer class="btn">
+<button id="folder"><i class="fa fa-folder"></i></button>
+<button id="single" onclick="show()" ><i class="fa fa-plus"></i></button>
+</footer>
+<script>
+    var taskspace=document.getElementById("taskspace")
+    var folder=document.getElementById("folder")
+    var single=document.getElementById("single")
+    var sub=document.getElementById("sub")
+    var singletask=document.getElementById("singletask")
+    var taskbox=document.getElementById("taskbox")
+    var del=document.getElementById("del")
+    function show(){
+        if(taskbox.style.display === "none"){
+            taskbox.style.display="inline-block"
+        }else{
+            taskbox.style.display="none"
+        }
+    }
+    function hide(){
+        del.remove()
+        var li=document.createElement("li") 
+        li.setAttribute("onclick","deltask(event)")
+        li.textContent=singletask.value
+        taskspace.append(li)
+        if(taskbox.style.display ==="inline-block"){
+            taskbox.style.display="none"
+        }
+        document.getElementById('singletask').value=" "      
+    }
+    function deltask(event){
+        event.target.remove()
+        
+    }
+
+</script>
+</body>
+</html>
