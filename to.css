@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: #333333;
+ }
+ header{
+    height: 50px;
+    background-color: black;
+}
+.border{
+    font-family: serif;
+    color: #aeffde;
+    padding: 10px;
+}
+#taskspace{
+    padding: 40px;
+    color: #e4f1ff;
+    margin-left: 100px;
+}
+p {
+    padding-top: 75px;
+    margin-left: -28px;
+}
+#taskbox{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    color: #aeffde;
+    display: none;
+    height: 100px;
+    width: 300px;
+    background-color: black;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+#taskbox input{
+    margin-top: 30px;
+}
+.btn{
+    display: relative;
+    margin-left: 80%;
+    position: fixed;
+    bottom: 10%;
+}
+.btn button{
+    font-size: 25px;
+    border-radius: 50%;
+    padding: 20px;
+    background-color: black;
+    color: #aeffde;
+
+}
+#taskbox button{
+    height: 25px;
+    width: 59px;
+    background-color: #333333;
+    color: #aeffde;
+}
